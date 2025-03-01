@@ -9,9 +9,9 @@ class a
     char arr[];
     int insert()
     {
-        cout<<"Enter the number of elements you want to enter in the queue ";
+        cout<<"Enter the number of elements you want to enter in the queue: ";
         cin>>n;
-        cout<<"enter the elements of the queue"<<"\n";
+        cout<<"enter the elements of the queue: ";
         for(int i=0;i<n;i++)
         {
             cin>>arr[i];
@@ -48,12 +48,21 @@ class a
         return 0;
 
     }
-    int search()
+    void search()
     {
         int p;
-        cout<<"enter the element you want to search";
-        cin>>p;
-        return 0;
+        cout << "Enter the element you want to search: ";
+        cin >> p;
+    
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i]==p)
+            {
+                cout<<"element found at the position: "<<i;
+                return ;
+            }
+        }
+        cout<<"element not found";
     }
 };
 
@@ -63,8 +72,6 @@ int main()
     while(1)
     {
     int q;
-    cout<<"\n"<<"enter what operation you want to perform"<<"\n";
-    cout<<"1.insert 2.del 3.display"<<"\n";
     cin>>q;    
     switch (q)
     {
