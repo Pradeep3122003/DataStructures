@@ -71,6 +71,30 @@ direct=i;
 cout<<"Hit Enter to Use "<<b;
 return 1;
 }
+else if(a=="create")
+{
+if(direct==0)
+{
+return 0;
+}
+else{
+cout<<direct<<" is created";
+return 1;
+}
+
+}
+else if(a=="delete")
+{
+if(direct==0)
+{
+return 0;
+}
+else{
+cout<<direct<<" is deleted";
+return 1;
+}
+
+}
 }
 
 }
