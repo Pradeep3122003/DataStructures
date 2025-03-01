@@ -53,7 +53,7 @@ class a
         int p;
         cout<<"enter the element you want to search";
         cin>>p;
-        
+        return 0;
     }
 };
 
