@@ -38,17 +38,11 @@ cout<<a[i]<<endl;
 int check1(string a)
 {
 
-string s[6]={"help","array", "stack", "queue", "tree", "graph"};
-for(int i=0;i<6;i++)
+string s[6]={"help","use", "create", "delete", "show"};
+for(int i=0;i<5;i++)
 {
  if(s[i] == a)
 {
- 
-  if(i>0)
-{
-direct=i;
-cout<<"Hit Enter to Use "<<a;
-}
 
 return 1;
 }
@@ -69,6 +63,12 @@ for(int i=0;i<6;i++)
  if(s[i] == b && a=="help")
 {
  description(i);
+return 1;
+}
+ else if(s[i] == b && a=="use")
+{
+direct=i;
+cout<<"Hit Enter to Use "<<b;
 return 1;
 }
 }
