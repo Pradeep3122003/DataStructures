@@ -42,7 +42,13 @@ for(int i=0;i<6;i++)
 {
  if(s[i] == a)
 {
- direct=i;
+ 
+  if(i>0)
+{
+direct=i;
+cout<<"Hit Enter to Use "<<a;
+}
+
 return 1;
 }
 
@@ -56,12 +62,14 @@ int check2(string a, string b)
 {
 
 string s[6]={"help","array", "stack", "queue", "tree", "graph"};
+if(check1(a)==1){
 for(int i=0;i<6;i++)
 {
- if(s[i] == b)
+ if(s[i] == b && a=="help")
 {
  description(i);
 return 1;
+}
 }
 
 }

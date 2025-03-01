@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 main
 *.sh
+=======
+*.exe
+queue
+*.sh
+>>>>>>> tayyab
