@@ -1,8 +1,7 @@
-#include<iostream>
 #include<bits/stdc++.h>
 #include<string>
 using namespace std;
-class a
+class queue
 {
     public:
     int n;
@@ -66,31 +65,3 @@ class a
     }
 };
 
-int main()
-{
-    a obj;
-    while(1)
-    {
-    int q;
-    cin>>q;    
-    switch (q)
-    {
-    case 1:
-        obj.insert();
-        break;
-    case 2:
-        obj.del();
-        break;
-    case 3:
-        obj.display();
-        break;
-    case 4:
-        obj.search();
-        break;
-    
-    default:
-        cout<<"enter the mentioned number";
-        break;
-    }
-}
-}
