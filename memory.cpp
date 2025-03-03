@@ -1,6 +1,3 @@
-#include<iostream>
-#include<string>
-using namespace std;
 class memory{
 
     public:
@@ -378,34 +375,3 @@ return 1;
 
 };
 
-
-
-
-int main()
-{
-memory user;
-string word;
-int o;
-while(true){
-cout<<"\n1.create 2.show  3.delete\noption: ";
-fflush(stdin);
-cin>>o;
-if(o==1)
-{
-cout<<"\nArray: ";
-fflush(stdin);
-cin>>word;
-user.arraycreation(word);
-}
-else if(o==2)
-{
-user.arrayshow();
-}
-else if(o==3){
-fflush(stdin);
-cin>>word;
-user.arraydelete(word);
-}
-}
-return 0;
-}

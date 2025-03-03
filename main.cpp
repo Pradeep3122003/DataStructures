@@ -1,10 +1,12 @@
 #include <iostream>
 using namespace std;
+#include "memory.cpp"
 #include "array.cpp"
 #include "queue.cpp"
+
 int direct=0;
 
-
+memory user;
 
 
 void header(){
@@ -25,11 +27,11 @@ cout<<"root/"<<a[i]<<"> ";
 
 
 void description(int i){ 
-string a[6]={ "","Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.", 
-"A stack stores multiple elements in a specific order, called LIFO.\nLIFO stands for Last in, First Out. To vizualise LIFO, think of a pile of pancakes, where pancakes are both added and removed from the top. So when removing a pancake, it will always be the last one you added. This way of organizing elements is called LIFO in computer science and programming",
-"A queue stores multiple elements in a specific order, called FIFO. FIFO stands for First in, First Out. To visualize FIFO, think of a queue as people standing in line in a supermarket. The first person to stand in line is also the first who can pay and leave the supermarket. This way of organizing elements is called FIFO in computer science and programming",
-"The Tree data structure is similar to Linked Lists in that each node contains data and can be linked to other nodes.",
-"A Graph is a non-linear data structure that consists of vertices (nodes) and edges."
+string a[6]={ "","\nArrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.", 
+"\nA stack stores multiple elements in a specific order, called LIFO.\nLIFO stands for Last in, First Out. To vizualise LIFO, think of a pile of pancakes, where pancakes are both added and removed from the top. So when removing a pancake, it will always be the last one you added. This way of organizing elements is called LIFO in computer science and programming",
+"\nA queue stores multiple elements in a specific order, called FIFO. FIFO stands for First in, First Out. To visualize FIFO, think of a queue as people standing in line in a supermarket. The first person to stand in line is also the first who can pay and leave the supermarket. This way of organizing elements is called FIFO in computer science and programming",
+"\nThe Tree data structure is similar to Linked Lists in that each node contains data and can be linked to other nodes.",
+"\nA Graph is a non-linear data structure that consists of vertices (nodes) and edges."
 
 };
 cout<<a[i]<<endl;
@@ -76,10 +78,26 @@ else if(a=="create")
 {
  if(direct==0)
  {return 0;}
- else{
-   cout<<direct<<" '"<<b<<"' "<<"created";
+ else if(direct==1){
+   user.arraycreation(b);
    return 1;
  }
+ else if(direct==2){
+   user.stackcreation(b);
+   return 1;
+ }
+ else if(direct==3){
+   user.queuecreation(b);
+   return 1;
+ }
+ else if(direct==4){
+   user.treecreation(b);
+   return 1;
+ }
+ else if(direct==5){
+   user.graphcreation(b);
+   return 1;
+  }
 }
 }
 
@@ -97,7 +115,7 @@ for(int i=0;i<6;i++)
 {
  if(s[i] == b && a=="create")
 {
- cout<<b<<" '"<<c<<"' "<<"created";
+ user.arraycreation(c);
 return 1;
 }
 }
@@ -144,6 +162,8 @@ if(check2(frag[0], frag[1])==0){
 
 return "";
 }
+
+
 
 int main()
 {
