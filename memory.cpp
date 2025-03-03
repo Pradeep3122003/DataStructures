@@ -127,6 +127,34 @@ cout<<queuename[i]<<"\t";
 return 1;
 }
 
+int queuedelete(string a){
+
+int m=-1;
+if(namecount[1]==0){
+cout<<"No queue to delete";
+return 0;
+}
+for(int i=0;i<=namecount[1];i++)
+ {
+   if(a==queuename[i]){
+     m=i;
+}}
+
+if(m==-1){
+cout<<"Queue '"<<a<<"' do not exist";
+return 0;
+}
+string temp;
+for(int i=m;i<=namecount[1];i++)
+ {
+   queuename[i]=queuename[i+1];
+}
+
+namecount[1]-=1;
+cout<<"Queue '"<<a<<"' deleted";
+return 1;
+
+}
 
 //stack operations
 
@@ -170,6 +198,35 @@ for(int i=0;i<=namecount[2];i++)
 cout<<stackname[i]<<"\t";
 }
 return 1;
+}
+
+int stackdelete(string a){
+
+int m=-1;
+if(namecount[2]==0){
+cout<<"No stack to delete";
+return 0;
+}
+for(int i=0;i<=namecount[2];i++)
+ {
+   if(a==stackname[i]){
+     m=i;
+}}
+
+if(m==-1){
+cout<<"Stack '"<<a<<"' do not exist";
+return 0;
+}
+string temp;
+for(int i=m;i<=namecount[2];i++)
+ {
+   stackname[i]=stackname[i+1];
+}
+
+namecount[2]-=1;
+cout<<"Stack '"<<a<<"' deleted";
+return 1;
+
 }
 
 //tree operations
@@ -216,6 +273,35 @@ cout<<treename[i]<<"\t";
 return 1;
 }
 
+int treedelete(string a){
+
+int m=-1;
+if(namecount[3]==0){
+cout<<"No tree to delete";
+return 0;
+}
+for(int i=0;i<=namecount[3];i++)
+ {
+   if(a==treename[i]){
+     m=i;
+}}
+
+if(m==-1){
+cout<<"Tree '"<<a<<"' do not exist";
+return 0;
+}
+string temp;
+for(int i=m;i<=namecount[3];i++)
+ {
+   treename[i]=treename[i+1];
+}
+
+namecount[3]-=1;
+cout<<"Tree '"<<a<<"' deleted";
+return 1;
+
+}
+
 //graph operations
 
 int graphcreation(string g)
@@ -258,6 +344,36 @@ for(int i=0;i<=namecount[4];i++)
 cout<<graphname[i]<<"\t";
 }
 return 1;
+}
+
+
+int graphdelete(string a){
+
+int m=-1;
+if(namecount[4]==0){
+cout<<"No graph to delete";
+return 0;
+}
+for(int i=0;i<=namecount[4];i++)
+ {
+   if(a==graphname[i]){
+     m=i;
+}}
+
+if(m==-1){
+cout<<"Graph '"<<a<<"' do not exist";
+return 0;
+}
+string temp;
+for(int i=m;i<=namecount[4];i++)
+ {
+   graphname[i]=graphname[i+1];
+}
+
+namecount[4]-=1;
+cout<<"Graph '"<<a<<"' deleted";
+return 1;
+
 }
 
 };
