@@ -18,7 +18,7 @@ cout<<"{Welcome to DS Visualtion Tool, enter menu for options, \nuse help before
 
 void dir(int i){
 string a[6]={"","Array/", "Stack/", "Queue/", "Tree/", "Graph/"};
-cout<<"root/"<<a[i]<<">";
+cout<<"root/"<<a[i]<<"> ";
 
 }
 
@@ -68,32 +68,8 @@ return 1;
  else if(s[i] == b && a=="use")
 {
 direct=i;
-cout<<"Hit Enter to Use "<<b;
+cout<<"Hit Enter to use "<<b;
 return 1;
-}
-else if(a=="create")
-{
-if(direct==0)
-{
-return 0;
-}
-else{
-cout<<direct<<" is created";
-return 1;
-}
-
-}
-else if(a=="delete")
-{
-if(direct==0)
-{
-return 0;
-}
-else{
-cout<<direct<<" is deleted";
-return 1;
-}
-
 }
 }
 
@@ -151,6 +127,8 @@ while (input != "exit")
 {
 fflush(stdin);
 getline(cin, input);
+if(input == "exit")
+{return 0;}
 dir(direct);
 cout<<inputvalidate(input, input.size());
 
