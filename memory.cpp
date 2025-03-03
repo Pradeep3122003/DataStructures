@@ -47,11 +47,40 @@ if(namecount[0]==0){
 return 0;
 }
 
-for(int i=0;i<=namecount[0];i++)
+for(int i=0;i<namecount[0];i++)
 {
 cout<<arrayname[i]<<"\t";
 }
 return 1;
+}
+
+int arraydelete(string a){
+
+int m=-1;
+if(namecount[0]==0){
+cout<<"No array to delete";
+return 0;
+}
+for(int i=0;i<=namecount[0];i++)
+ {
+   if(a==arrayname[i]){
+     m=i;
+}}
+
+if(m==-1){
+cout<<"Array '"<<a<<"' do not exist";
+return 0;
+}
+string temp;
+for(int i=m;i<=namecount[0];i++)
+ {
+   arrayname[i]=arrayname[i+1];
+}
+
+namecount[0]-=1;
+cout<<"Array '"<<a<<"' deleted";
+return 1;
+
 }
 
 //queue operations
@@ -242,7 +271,7 @@ memory user;
 string word;
 int o;
 while(true){
-cout<<"\n1.create 2.show\noption: ";
+cout<<"\n1.create 2.show  3.delete\noption: ";
 fflush(stdin);
 cin>>o;
 if(o==1)
@@ -255,6 +284,11 @@ user.arraycreation(word);
 else if(o==2)
 {
 user.arrayshow();
+}
+else if(o==3){
+fflush(stdin);
+cin>>word;
+user.arraydelete(word);
 }
 }
 return 0;
