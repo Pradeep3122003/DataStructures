@@ -40,6 +40,19 @@ cout<<"Array '"<<g<<"' Created.";
 return 0;
 }}
 
+int arrayshow(){
+
+if(namecount[0]==0){
+ cout<<"No arrays to show.";
+return 0;
+}
+
+for(int i=0;i<=namecount[0];i++)
+{
+cout<<arrayname[i]<<"\t";
+}
+return 1;
+}
 
 //queue operations
 
@@ -132,6 +145,7 @@ cout<<"Tree '"<<g<<"' Created.";
 return 0;
 }}
 
+
 //graph operations
 
 int graphcreation(string g)
@@ -171,11 +185,22 @@ int main()
 {
 memory user;
 string word;
+int o;
 while(true){
-cout<<"\nName: ";
+cout<<"\n1.create 2.show\noption: ";
+fflush(stdin);
+cin>>o;
+if(o==1)
+{
+cout<<"\nArray: ";
 fflush(stdin);
 cin>>word;
 user.arraycreation(word);
+}
+else if(o==2)
+{
+user.arrayshow();
+}
 }
 return 0;
 }
