@@ -71,11 +71,38 @@ direct=i;
 cout<<"Hit Enter to use "<<b;
 return 1;
 }
+else if(a=="create")
+{
+ if(direct==0)
+ {return 0;}
+ else{
+   cout<<direct<<" '"<<b<<"' "<<"created";
+   return 1;
+ }
+}
 }
 
 }
 return 0;
 
+}
+
+
+int check3(string a, string b, string c){
+string s[6]={"array", "stack", "queue", "tree", "graph"};
+if(check1(a)==1){
+
+for(int i=0;i<6;i++)
+{
+ if(s[i] == b && a=="create")
+{
+ cout<<b<<" '"<<c<<"' "<<"created";
+return 1;
+}
+}
+
+}
+return 0;
 }
 
 string inputvalidate(string a, int s){
