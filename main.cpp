@@ -46,7 +46,31 @@ for(int i=0;i<5;i++)
 {
  if(s[i] == a)
 {
-
+if(a == "show")
+{
+if(direct==0)
+ {return 0;}
+ else if(direct==1){
+   user.arrayshow();
+   return 1;
+ }
+ else if(direct==2){
+   user.stackshow();
+   return 1;
+ }
+ else if(direct==3){
+   user.queueshow();
+   return 1;
+ }
+ else if(direct==4){
+   user.treeshow();
+   return 1;
+ }
+ else if(direct==5){
+   user.graphshow();
+   return 1;
+  }
+}
 return 1;
 }
 
@@ -96,6 +120,30 @@ else if(a=="create")
  }
  else if(direct==5){
    user.graphcreation(b);
+   return 1;
+  }
+}
+else if(a=="delete"){
+ if(direct==0)
+ {return 0;}
+ else if(direct==1){
+   user.arraydelete(b);
+   return 1;
+ }
+ else if(direct==2){
+   user.stackdelete(b);
+   return 1;
+ }
+ else if(direct==3){
+   user.queuedelete(b);
+   return 1;
+ }
+ else if(direct==4){
+   user.treedelete(b);
+   return 1;
+ }
+ else if(direct==5){
+   user.graphdelete(b);
    return 1;
   }
 }
