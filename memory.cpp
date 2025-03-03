@@ -11,7 +11,7 @@ class memory{
     string treename[5];
     string graphname[5];
 
-//array operations completed
+//array operations
 int arraycreation(string g)
 {
  if(namecount[0]==0)
@@ -41,7 +41,7 @@ return 0;
 }}
 
 
-//queue operations completed
+//queue operations
 
 int queuecreation(string g)
 {
@@ -72,7 +72,7 @@ return 0;
 }}
 
 
-//stack operations completed
+//stack operations
 
 int stackcreation(string g)
 {
@@ -102,7 +102,7 @@ cout<<"Stack '"<<g<<"' Created.";
 return 0;
 }}
 
-//tree operations completed
+//tree operations
 
 int treecreation(string g)
 {
@@ -132,7 +132,7 @@ cout<<"Tree '"<<g<<"' Created.";
 return 0;
 }}
 
-//graph operations completed
+//graph operations
 
 int graphcreation(string g)
 {
