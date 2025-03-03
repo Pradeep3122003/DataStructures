@@ -1,6 +1,7 @@
 #include <iostream>
-#include "queue.cpp"
 using namespace std;
+#include "array.cpp"
+#include "queue.cpp"
 int direct=0;
 
 
