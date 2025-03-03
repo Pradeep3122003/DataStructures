@@ -84,6 +84,20 @@ cout<<"Queue '"<<g<<"' Created.";
 return 0;
 }}
 
+int queueshow(){
+
+if(namecount[1]==0){
+ cout<<"No queues to show.";
+return 0;
+}
+
+for(int i=0;i<=namecount[1];i++)
+{
+cout<<queuename[i]<<"\t";
+}
+return 1;
+}
+
 
 //stack operations
 
@@ -115,6 +129,20 @@ cout<<"Stack '"<<g<<"' Created.";
 return 0;
 }}
 
+int stackshow(){
+
+if(namecount[2]==0){
+ cout<<"No stacks to show.";
+return 0;
+}
+
+for(int i=0;i<=namecount[2];i++)
+{
+cout<<stackname[i]<<"\t";
+}
+return 1;
+}
+
 //tree operations
 
 int treecreation(string g)
@@ -145,6 +173,19 @@ cout<<"Tree '"<<g<<"' Created.";
 return 0;
 }}
 
+int treeshow(){
+
+if(namecount[3]==0){
+ cout<<"No trees to show.";
+return 0;
+}
+
+for(int i=0;i<=namecount[3];i++)
+{
+cout<<treename[i]<<"\t";
+}
+return 1;
+}
 
 //graph operations
 
@@ -175,6 +216,20 @@ namecount[4]+=1;
 cout<<"Graph '"<<g<<"' Created.";
 return 0;
 }}
+
+int graphshow(){
+
+if(namecount[4]==0){
+ cout<<"No graphs to show.";
+return 0;
+}
+
+for(int i=0;i<=namecount[4];i++)
+{
+cout<<graphname[i]<<"\t";
+}
+return 1;
+}
 
 };
 
