@@ -1,11 +1,11 @@
 
-class array {
+class classArray {
 public:
     int arr[100];
     int size;
 
 
-    array() {
+    classArray() {
         size = 0;
     }
 

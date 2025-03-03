@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 #include "memory.cpp"
-#include "array.cpp"
 #include "queue.cpp"
 
 int direct=0;
@@ -41,8 +40,8 @@ cout<<a[i]<<endl;
 int check1(string a)
 {
 
-string s[6]={"help","use", "create", "delete", "show"};
-for(int i=0;i<5;i++)
+string s[10]={"help","use", "create", "delete", "show", "drop", "display", "insert", "search"};
+for(int i=0;i<9;i++)
 {
  if(s[i] == a)
 {
@@ -103,7 +102,7 @@ else if(a=="create")
  if(direct==0)
  {return 0;}
  else if(direct==1){
-   user.arraycreation(b);
+  user.arraycreation(b);
    return 1;
  }
  else if(direct==2){
@@ -123,7 +122,7 @@ else if(a=="create")
    return 1;
   }
 }
-else if(a=="delete"){
+else if(a=="drop"){
  if(direct==0)
  {return 0;}
  else if(direct==1){
@@ -155,22 +154,6 @@ return 0;
 }
 
 
-int check3(string a, string b, string c){
-string s[6]={"array", "stack", "queue", "tree", "graph"};
-if(check1(a)==1){
-
-for(int i=0;i<6;i++)
-{
- if(s[i] == b && a=="create")
-{
- user.arraycreation(c);
-return 1;
-}
-}
-
-}
-return 0;
-}
 
 string inputvalidate(string a, int s){
 string frag[5], temp;

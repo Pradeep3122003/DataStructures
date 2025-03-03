@@ -1,3 +1,4 @@
+#include "array.cpp"
 class memory{
 
     public:
@@ -14,8 +15,9 @@ int arraycreation(string g)
  if(namecount[0]==0)
 {
 arrayname[namecount[0]]=g;
-namecount[0]+=1;
  cout<<"Array '"<<g<<"' Created.";
+ classArray arrayname[namecount[0]];
+ namecount[0]+=1;
 return 1;
 }
 
@@ -34,7 +36,7 @@ return 0;
 arrayname[namecount[0]]=g;
 namecount[0]+=1;
 cout<<"Array '"<<g<<"' Created.";
-return 0;
+return 1;
 }}
 
 int arrayshow(){
@@ -55,7 +57,7 @@ int arraydelete(string a){
 
 int m=-1;
 if(namecount[0]==0){
-cout<<"No array to delete";
+cout<<"No array to drop";
 return 0;
 }
 for(int i=0;i<=namecount[0];i++)
@@ -75,7 +77,7 @@ for(int i=m;i<=namecount[0];i++)
 }
 
 namecount[0]-=1;
-cout<<"Array '"<<a<<"' deleted";
+cout<<"Array '"<<a<<"' droped";
 return 1;
 
 }
@@ -128,7 +130,7 @@ int queuedelete(string a){
 
 int m=-1;
 if(namecount[1]==0){
-cout<<"No queue to delete";
+cout<<"No queue to drop";
 return 0;
 }
 for(int i=0;i<=namecount[1];i++)
@@ -148,7 +150,7 @@ for(int i=m;i<=namecount[1];i++)
 }
 
 namecount[1]-=1;
-cout<<"Queue '"<<a<<"' deleted";
+cout<<"Queue '"<<a<<"' droped";
 return 1;
 
 }
@@ -201,7 +203,7 @@ int stackdelete(string a){
 
 int m=-1;
 if(namecount[2]==0){
-cout<<"No stack to delete";
+cout<<"No stack to drop";
 return 0;
 }
 for(int i=0;i<=namecount[2];i++)
@@ -221,7 +223,7 @@ for(int i=m;i<=namecount[2];i++)
 }
 
 namecount[2]-=1;
-cout<<"Stack '"<<a<<"' deleted";
+cout<<"Stack '"<<a<<"' droped";
 return 1;
 
 }
@@ -274,7 +276,7 @@ int treedelete(string a){
 
 int m=-1;
 if(namecount[3]==0){
-cout<<"No tree to delete";
+cout<<"No tree to drop";
 return 0;
 }
 for(int i=0;i<=namecount[3];i++)
@@ -294,7 +296,7 @@ for(int i=m;i<=namecount[3];i++)
 }
 
 namecount[3]-=1;
-cout<<"Tree '"<<a<<"' deleted";
+cout<<"Tree '"<<a<<"' droped";
 return 1;
 
 }
@@ -348,7 +350,7 @@ int graphdelete(string a){
 
 int m=-1;
 if(namecount[4]==0){
-cout<<"No graph to delete";
+cout<<"No graph to drop";
 return 0;
 }
 for(int i=0;i<=namecount[4];i++)
@@ -368,7 +370,7 @@ for(int i=m;i<=namecount[4];i++)
 }
 
 namecount[4]-=1;
-cout<<"Graph '"<<a<<"' deleted";
+cout<<"Graph '"<<a<<"' droped";
 return 1;
 
 }
