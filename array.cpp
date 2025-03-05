@@ -61,7 +61,7 @@ public:
     }
 
     void inputElements() {
-        cout << "Enter the number of initial elements: ";
+        cout << "\nEnter the number of elements: ";
         cin >> size;
 
         if (size > 100) {

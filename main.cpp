@@ -146,6 +146,78 @@ else if(a=="drop"){
    return 1;
   }
 }
+else if(a=="insert"){
+ if(direct==0)
+ {return 0;}
+ else if(direct==1){
+   user.insertarray(b);
+   return 1;
+ }
+ else if(direct==2){
+   user.stackdelete(b);
+   return 1;
+ }
+ else if(direct==3){
+   user.queuedelete(b);
+   return 1;
+ }
+ else if(direct==4){
+   user.treedelete(b);
+   return 1;
+ }
+ else if(direct==5){
+   user.graphdelete(b);
+   return 1;
+  }
+}
+else if(a=="display"){
+ if(direct==0)
+ {return 0;}
+ else if(direct==1){
+   user.outputarray(b);
+   return 1;
+ }
+ else if(direct==2){
+   user.stackdelete(b);
+   return 1;
+ }
+ else if(direct==3){
+   user.queuedelete(b);
+   return 1;
+ }
+ else if(direct==4){
+   user.treedelete(b);
+   return 1;
+ }
+ else if(direct==5){
+   user.graphdelete(b);
+   return 1;
+  }
+}
+else if(a=="delete"){
+ if(direct==0)
+ {return 0;}
+ else if(direct==1){
+   user.deletearray(b);
+   return 1;
+ }
+ else if(direct==2){
+   user.stackdelete(b);
+   return 1;
+ }
+ else if(direct==3){
+   user.queuedelete(b);
+   return 1;
+ }
+ else if(direct==4){
+   user.treedelete(b);
+   return 1;
+ }
+ else if(direct==5){
+   user.graphdelete(b);
+   return 1;
+  }
+}
 }
 
 }

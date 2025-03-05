@@ -4,6 +4,7 @@ class memory{
     public:
     int namecount[5]={0,0,0,0,0};
     string arrayname[5];
+    classArray arr[5];
     string queuename[5];
     string stackname[5];
     string treename[5];
@@ -15,8 +16,8 @@ int arraycreation(string g)
  if(namecount[0]==0)
 {
 arrayname[namecount[0]]=g;
+arr[namecount[0]].inputElements();
  cout<<"Array '"<<g<<"' Created.";
- classArray arrayname[namecount[0]];
  namecount[0]+=1;
 return 1;
 }
@@ -34,6 +35,7 @@ cout<<"Maximum 5 arrays can be created";
 return 0;
 } else {
 arrayname[namecount[0]]=g;
+arr[namecount[0]].inputElements();
 namecount[0]+=1;
 cout<<"Array '"<<g<<"' Created.";
 return 1;
@@ -82,6 +84,64 @@ return 1;
 
 }
 
+//sub array operations
+int findarray(string a)
+{
+  for(int i=0;i<namecount[0];i++)
+  {
+      if(arrayname[i]==a)
+       {return i;}
+  }
+ return -1;
+}
+
+int insertarray(string a)
+{
+int p=findarray(a);
+if(p==-1)
+{
+cout<<"Array '"<<a<<"' do not exist\n";
+return 0;
+}
+cout<<"Position: ";
+   int m,n;
+   cin>>m;
+   cout<<"Element: ";
+   cin>>n;
+arr[p].insertElement(n,m);
+return 1;
+}
+
+
+int deletearray(string a)
+{
+int p=findarray(a);
+if(p==-1)
+{
+cout<<"Array '"<<a<<"' do not exist\n";
+return 0;
+}
+cout<<"Position: ";
+   int m;
+   cin>>m;
+arr[p].deleteElement(m);
+return 1;
+
+}
+
+int outputarray(string a)
+{
+int p=findarray(a);
+if(p==-1)
+{
+cout<<"Array '"<<a<<"' do not exist\n";
+return 0;
+}
+
+arr[p].printArray();
+return 1;
+
+}
 //queue operations
 
 int queuecreation(string g)
