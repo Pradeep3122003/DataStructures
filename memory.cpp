@@ -17,7 +17,7 @@ int arraycreation(string g)
 {
 arrayname[namecount[0]]=g;
 arr[namecount[0]].inputElements();
- cout<<"Array '"<<g<<"' Created.";
+ cout<<"Array '"<<g<<"' Created.\n";
  namecount[0]+=1;
 return 1;
 }
@@ -37,7 +37,7 @@ return 0;
 arrayname[namecount[0]]=g;
 arr[namecount[0]].inputElements();
 namecount[0]+=1;
-cout<<"Array '"<<g<<"' Created.";
+cout<<"Array '"<<g<<"' Created.\n";
 return 1;
 }}
 
