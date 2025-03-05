@@ -1,4 +1,5 @@
 #include "array.cpp"
+#include "queue.cpp"
 class memory{
 
     public:
@@ -6,6 +7,7 @@ class memory{
     string arrayname[5];
     classArray arr[5];
     string queuename[5];
+    classQueue que[5];
     string stackname[5];
     string treename[5];
     string graphname[5];
@@ -211,6 +213,56 @@ for(int i=m;i<=namecount[1];i++)
 
 namecount[1]-=1;
 cout<<"Queue '"<<a<<"' droped";
+return 1;
+
+}
+//queue sub operations
+
+int findqueue(string a)
+{
+  for(int i=0;i<namecount[1];i++)
+  {
+      if(queuename[i]==a)
+       {return i;}
+  }
+ return -1;
+}
+
+int insertqueue(string a)
+{
+int p=findqueue(a);
+if(p==-1)
+{
+cout<<"Queue '"<<a<<"' do not exist\n";
+return 0;
+}
+que[p].insert();
+return 1;
+}
+
+int deletequeue(string a)
+{
+int p=findqueue(a);
+if(p==-1)
+{
+cout<<"Queue '"<<a<<"' do not exist\n";
+return 0;
+}
+que[p].del();
+return 1;
+
+}
+
+int outputqueue(string a)
+{
+int p=findqueue(a);
+if(p==-1)
+{
+cout<<"Queue '"<<a<<"' do not exist\n";
+return 0;
+}
+
+que[p].display();
 return 1;
 
 }

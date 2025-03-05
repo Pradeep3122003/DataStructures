@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 #include "memory.cpp"
-#include "queue.cpp"
 
 int direct=0;
 
@@ -158,7 +157,7 @@ else if(a=="insert"){
    return 1;
  }
  else if(direct==3){
-   user.queuedelete(b);
+   user.insertqueue(b);
    return 1;
  }
  else if(direct==4){
@@ -182,7 +181,7 @@ else if(a=="display"){
    return 1;
  }
  else if(direct==3){
-   user.queuedelete(b);
+   user.outputqueue(b);
    return 1;
  }
  else if(direct==4){
@@ -206,7 +205,7 @@ else if(a=="delete"){
    return 1;
  }
  else if(direct==3){
-   user.queuedelete(b);
+   user.deletequeue(b);
    return 1;
  }
  else if(direct==4){
