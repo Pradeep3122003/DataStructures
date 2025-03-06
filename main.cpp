@@ -153,7 +153,7 @@ else if(a=="insert"){
    return 1;
  }
  else if(direct==2){
-   user.stackdelete(b);
+   user.insertstack(b);
    return 1;
  }
  else if(direct==3){
@@ -177,7 +177,7 @@ else if(a=="display"){
    return 1;
  }
  else if(direct==2){
-   user.stackdelete(b);
+   user.outputstack(b);
    return 1;
  }
  else if(direct==3){
@@ -201,7 +201,7 @@ else if(a=="delete"){
    return 1;
  }
  else if(direct==2){
-   user.stackdelete(b);
+   user.deletestack(b);
    return 1;
  }
  else if(direct==3){

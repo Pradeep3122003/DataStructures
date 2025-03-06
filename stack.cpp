@@ -1,15 +1,14 @@
-#include <iostream>
-using namespace std;
 
-class Stack {
+class classStack {
 private:
     int arr[100]; 
     int top;      
     int maxSize;  
 
 public:
-    Stack(int size) {
-        maxSize = size;
+    void stacksize() {
+        cout<<"Enter stack size: ";
+        cin>>maxSize;
         top = -1; 
     }
 
@@ -51,45 +50,3 @@ public:
     }
 };
 
-int main() {
-    int size;
-    cout << "Enter the maximum size of the stack: ";
-    cin >> size;
-
-    Stack stack(size); 
-
-    while (true) {
-        cout << "\nMenu:\n1. Push\n2. Pop\n3. Peek\n4. Display\n5. Exit\n";
-        cout << "Enter your choice: ";
-        int choice, element;
-        cin >> choice;
-
-        switch (choice) {
-            case 1:
-                cout << "Enter the element to push: ";
-                cin >> element;
-                stack.push(element);
-                break;
-
-            case 2:
-                stack.pop();
-                break;
-
-            case 3:
-                stack.peek();
-                break;
-
-            case 4:
-                stack.display();
-                break;
-
-            case 5:
-                return 0;
-
-            default:
-                cout << "Invalid choice! Please try again." << endl;
-        }
-    }
-
-    return 0;
-}

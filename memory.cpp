@@ -1,5 +1,6 @@
 #include "array.cpp"
 #include "queue.cpp"
+#include "stack.cpp"
 class memory{
 
     public:
@@ -9,6 +10,7 @@ class memory{
     string queuename[5];
     classQueue que[5];
     string stackname[5];
+    classStack sta[5];
     string treename[5];
     string graphname[5];
 
@@ -274,8 +276,9 @@ int stackcreation(string g)
  if(namecount[2]==0)
 {
 stackname[namecount[2]]=g;
+sta[namecount[2]].stacksize();
 namecount[2]+=1;
- cout<<"Stack '"<<g<<"' Created.";
+ cout<<"Stack '"<<g<<"' Created.\n";
 return 1;
 }
 
@@ -292,8 +295,9 @@ cout<<"Maximum 5 stacks can be created";
 return 0;
 } else {
 stackname[namecount[2]]=g;
+sta[namecount[2]].stacksize();
 namecount[2]+=1;
-cout<<"Stack '"<<g<<"' Created.";
+cout<<"Stack '"<<g<<"' Created.\n";
 return 0;
 }}
 
@@ -336,6 +340,59 @@ for(int i=m;i<=namecount[2];i++)
 
 namecount[2]-=1;
 cout<<"Stack '"<<a<<"' droped";
+return 1;
+
+}
+//stack sub operations
+
+int findstack(string a)
+{
+  for(int i=0;i<namecount[2];i++)
+  {
+      if(stackname[i]==a)
+       {return i;}
+  }
+ return -1;
+}
+
+int insertstack(string a)
+{
+int p=findstack(a);
+if(p==-1)
+{
+cout<<"Stack '"<<a<<"' do not exist\n";
+return 0;
+}
+int n;
+cout<<"Enter element to push: ";
+cin>>n;
+sta[p].push(n);
+return 1;
+}
+
+int deletestack(string a)
+{
+int p=findstack(a);
+if(p==-1)
+{
+cout<<"Stack '"<<a<<"' do not exist\n";
+return 0;
+}
+sta[p].pop();
+return 1;
+
+}
+
+int outputstack(string a)
+{
+int p=findstack(a);
+if(p==-1)
+{
+cout<<"Stack '"<<a<<"' do not exist\n";
+return 0;
+}
+
+sta[p].display();
 return 1;
 
 }
