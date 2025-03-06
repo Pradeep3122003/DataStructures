@@ -1,46 +1,74 @@
-*Data Structure Visualisation software*
+# 🚀 Data Structure Visualization Software
 
-   The purpose of this code is to use and understand the different data structure such as: Array, Stack, Queue, Tree and Graph. 
-It helps to create , delete, modify and analyse the structures with the help of command line Interface.
+## 📌 Overview
+The **Data Structure Visualization Software** helps users understand and interact with different data structures like **Arrays, Stacks, Queues, Trees, and Graphs**. It provides a **command-line interface (CLI)** to create, modify, delete, and analyze data structures efficiently.
 
+---
 
-Execution:
+## 🛠️ Execution Guide
+### Step 1: Set Up the Repository
+```sh
+# Create a new directory
+mkdir dsa && cd dsa
 
-Step 1:
-create folder: dsa(or any name)
-command-1: git init
-Clone the repository: git clone https://github.com/Pradeep3122003/DataStructures.git
-command-2: sudo apt update && sudo apt upgrade
+# Initialize Git and clone the repository
+git init
+git clone https://github.com/Pradeep3122003/DataStructures.git
 
-Step 2:
-Execute the main.cpp file
+# Update system packages (Linux users)
+sudo apt update && sudo apt upgrade
+```
 
-For Windows: Use VScode
+### Step 2: Compile and Run
+#### 🔹 Windows (VS Code Recommended)
+- Open `main.cpp` in VS Code
+- Compile and run using any C++ compiler
 
-For Linux:
+#### 🔹 Linux (Command Line)
+```sh
 g++ main.cpp -o main
 ./main
+```
 
-
-Step 3:
-
-When you run ./main file you will get the interface saying
-
+### Step 3: Using the Software
+When executed, the interface will start as:
+```sh
 root/>
+```
+To exit, use:
+```sh
+root/> exit
+```
 
-to exit the main file use 'exit' command.
+---
 
-root/>exit
+## ⚡ Command Guide
+Use these commands within the software:
 
+| Command   | Description |
+|-----------|------------|
+| `help`    | Get details about a data structure. *(Example: `root/> help array`)* |
+| `use`     | Switch to a specific data structure. *(Example: `root/> use array`)* |
+| `create`  | Create a new instance. *(Example: `root/Array> create array1`)* |
+| `show`    | Display all created instances. *(Example: `root/Array/> show`)* |
+| `drop`    | Delete an instance. *(Example: `root/Array/> drop array1`)* |
+| `insert`  | Insert elements. *(Example: `root/Array/> insert array1`)* |
+| `display` | View all elements. *(Example: `root/Array/> display array1`)* |
+| `delete`  | Remove an element. *(Example: `root/Array/> delete array1`)* |
+| `exit`    | Close the software. |
 
-Commands to use Software
+---
 
-help: use this command to know more about structures. (ex: root/> help array)
-use: this command is used to shift or start using a DS. (ex: root/> use array)
-create: After using 'use' command or only after shifting to a specific DS use this command. (ex: root/Array> create array1)
-show: This command helps to see all created instances in a specific DS. (ex: root/Array/> show)
-drop: This command is used to drop/delete the created instance. (ex: root/Array/> drop)
-insert: Command is used to insert elements in created instance. (ex: root/Array/> insert array1)
-display: Command is used to display all elements in an instance. (ex: root/Array/> display array1)
-delete: Command is used to delete element from an instance. (ex: root/Array/> delete array1)
-exit: Command is used to stop the program execution.
+## 🎯 Features
+✅ **Interactive CLI** for hands-on learning  
+✅ Supports multiple **data structures**  
+✅ **Easy-to-use** commands for operations  
+✅ **Cross-platform** support (Windows & Linux)  
+✅ **Open-source** and customizable  
+
+---
+
+📌 **Contribute & Explore**: Fork the repository and enhance the project! 🌟
+
+🔗 **GitHub Repo:** [DataStructures](https://github.com/Pradeep3122003/DataStructures)
+
