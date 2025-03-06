@@ -25,11 +25,11 @@ cout<<"root/"<<a[i]<<"> ";
 
 
 void description(int i){ 
-string a[6]={ "","\nArrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.", 
-"\nA stack stores multiple elements in a specific order, called LIFO.\nLIFO stands for Last in, First Out. To vizualise LIFO, think of a pile of pancakes, where pancakes are both added and removed from the top. So when removing a pancake, it will always be the last one you added. This way of organizing elements is called LIFO in computer science and programming",
-"\nA queue stores multiple elements in a specific order, called FIFO. FIFO stands for First in, First Out. To visualize FIFO, think of a queue as people standing in line in a supermarket. The first person to stand in line is also the first who can pay and leave the supermarket. This way of organizing elements is called FIFO in computer science and programming",
-"\nThe Tree data structure is similar to Linked Lists in that each node contains data and can be linked to other nodes.",
-"\nA Graph is a non-linear data structure that consists of vertices (nodes) and edges."
+string a[6]={ "","Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.\n", 
+"A stack stores multiple elements in a specific order, called LIFO.\nLIFO stands for Last in, First Out. To vizualise LIFO, think of a pile of pancakes, where pancakes are both added and removed from the top. So when removing a pancake, it will always be the last one you added. This way of organizing elements is called LIFO in computer science and programming\n",
+"A queue stores multiple elements in a specific order, called FIFO. FIFO stands for First in, First Out. To visualize FIFO, think of a queue as people standing in line in a supermarket. The first person to stand in line is also the first who can pay and leave the supermarket. This way of organizing elements is called FIFO in computer science and programming",
+"The Tree data structure is similar to Linked Lists in that each node contains data and can be linked to other nodes.\n",
+"A Graph is a non-linear data structure that consists of vertices (nodes) and edges.\n"
 
 };
 cout<<a[i]<<endl;
