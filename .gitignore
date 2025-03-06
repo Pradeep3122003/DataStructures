@@ -1,8 +1,7 @@
-<<<<<<< HEAD
+
 main
-*.sh
-=======
-*.exe
 queue
+array
 *.sh
->>>>>>> tayyab
+*.exe
+
