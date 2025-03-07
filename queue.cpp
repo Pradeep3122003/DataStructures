@@ -1,16 +1,15 @@
 #include<bits/stdc++.h>
 #include<string>
-using namespace std;
-class queue
+class classQueue
 {
     public:
     int n;
     char arr[];
     int insert()
     {
-        cout<<"Enter the number of elements you want to enter in the queue: ";
+        cout<<"Enter the number of elements: ";
         cin>>n;
-        cout<<"enter the elements of the queue: ";
+        cout<<"enter "<<n<<" elements of the queue: ";
         for(int i=0;i<n;i++)
         {
             cin>>arr[i];

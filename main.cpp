@@ -1,9 +1,10 @@
 #include <iostream>
-#include "queue.cpp"
 using namespace std;
+#include "memory.cpp"
+
 int direct=0;
 
-
+memory user;
 
 
 void header(){
@@ -24,11 +25,11 @@ cout<<"root/"<<a[i]<<"> ";
 
 
 void description(int i){ 
-string a[6]={ "","Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.", 
-"A stack stores multiple elements in a specific order, called LIFO.\nLIFO stands for Last in, First Out. To vizualise LIFO, think of a pile of pancakes, where pancakes are both added and removed from the top. So when removing a pancake, it will always be the last one you added. This way of organizing elements is called LIFO in computer science and programming",
+string a[6]={ "","Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.\n", 
+"A stack stores multiple elements in a specific order, called LIFO.\nLIFO stands for Last in, First Out. To vizualise LIFO, think of a pile of pancakes, where pancakes are both added and removed from the top. So when removing a pancake, it will always be the last one you added. This way of organizing elements is called LIFO in computer science and programming\n",
 "A queue stores multiple elements in a specific order, called FIFO. FIFO stands for First in, First Out. To visualize FIFO, think of a queue as people standing in line in a supermarket. The first person to stand in line is also the first who can pay and leave the supermarket. This way of organizing elements is called FIFO in computer science and programming",
-"The Tree data structure is similar to Linked Lists in that each node contains data and can be linked to other nodes.",
-"A Graph is a non-linear data structure that consists of vertices (nodes) and edges."
+"The Tree data structure is similar to Linked Lists in that each node contains data and can be linked to other nodes.\n",
+"A Graph is a non-linear data structure that consists of vertices (nodes) and edges.\n"
 
 };
 cout<<a[i]<<endl;
@@ -38,12 +39,36 @@ cout<<a[i]<<endl;
 int check1(string a)
 {
 
-string s[6]={"help","use", "create", "delete", "show"};
-for(int i=0;i<5;i++)
+string s[10]={"help","use", "create", "delete", "show", "drop", "display", "insert", "search"};
+for(int i=0;i<9;i++)
 {
  if(s[i] == a)
 {
-
+if(a == "show")
+{
+if(direct==0)
+ {return 0;}
+ else if(direct==1){
+   user.arrayshow();
+   return 1;
+ }
+ else if(direct==2){
+   user.stackshow();
+   return 1;
+ }
+ else if(direct==3){
+   user.queueshow();
+   return 1;
+ }
+ else if(direct==4){
+   user.treeshow();
+   return 1;
+ }
+ else if(direct==5){
+   user.graphshow();
+   return 1;
+  }
+}
 return 1;
 }
 
@@ -75,10 +100,122 @@ else if(a=="create")
 {
  if(direct==0)
  {return 0;}
- else{
-   cout<<direct<<" '"<<b<<"' "<<"created";
+ else if(direct==1){
+  user.arraycreation(b);
    return 1;
  }
+ else if(direct==2){
+   user.stackcreation(b);
+   return 1;
+ }
+ else if(direct==3){
+   user.queuecreation(b);
+   return 1;
+ }
+ else if(direct==4){
+   user.treecreation(b);
+   return 1;
+ }
+ else if(direct==5){
+   user.graphcreation(b);
+   return 1;
+  }
+}
+else if(a=="drop"){
+ if(direct==0)
+ {return 0;}
+ else if(direct==1){
+   user.arraydelete(b);
+   return 1;
+ }
+ else if(direct==2){
+   user.stackdelete(b);
+   return 1;
+ }
+ else if(direct==3){
+   user.queuedelete(b);
+   return 1;
+ }
+ else if(direct==4){
+   user.treedelete(b);
+   return 1;
+ }
+ else if(direct==5){
+   user.graphdelete(b);
+   return 1;
+  }
+}
+else if(a=="insert"){
+ if(direct==0)
+ {return 0;}
+ else if(direct==1){
+   user.insertarray(b);
+   return 1;
+ }
+ else if(direct==2){
+   user.insertstack(b);
+   return 1;
+ }
+ else if(direct==3){
+   user.insertqueue(b);
+   return 1;
+ }
+ else if(direct==4){
+   user.treedelete(b);
+   return 1;
+ }
+ else if(direct==5){
+   user.graphdelete(b);
+   return 1;
+  }
+}
+else if(a=="display"){
+ if(direct==0)
+ {return 0;}
+ else if(direct==1){
+   user.outputarray(b);
+   return 1;
+ }
+ else if(direct==2){
+   user.outputstack(b);
+   return 1;
+ }
+ else if(direct==3){
+   user.outputqueue(b);
+   return 1;
+ }
+ else if(direct==4){
+   user.treedelete(b);
+   return 1;
+ }
+ else if(direct==5){
+   user.graphdelete(b);
+   return 1;
+  }
+}
+else if(a=="delete"){
+ if(direct==0)
+ {return 0;}
+ else if(direct==1){
+   user.deletearray(b);
+   return 1;
+ }
+ else if(direct==2){
+   user.deletestack(b);
+   return 1;
+ }
+ else if(direct==3){
+   user.deletequeue(b);
+   return 1;
+ }
+ else if(direct==4){
+   user.treedelete(b);
+   return 1;
+ }
+ else if(direct==5){
+   user.graphdelete(b);
+   return 1;
+  }
 }
 }
 
@@ -88,22 +225,6 @@ return 0;
 }
 
 
-int check3(string a, string b, string c){
-string s[6]={"array", "stack", "queue", "tree", "graph"};
-if(check1(a)==1){
-
-for(int i=0;i<6;i++)
-{
- if(s[i] == b && a=="create")
-{
- cout<<b<<" '"<<c<<"' "<<"created";
-return 1;
-}
-}
-
-}
-return 0;
-}
 
 string inputvalidate(string a, int s){
 string frag[5], temp;
@@ -143,6 +264,8 @@ if(check2(frag[0], frag[1])==0){
 
 return "";
 }
+
+
 
 int main()
 {
