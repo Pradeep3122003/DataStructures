@@ -8,12 +8,12 @@ The **Data Structure Visualization Software** helps users understand and interac
 ## 🛠️ Execution Guide
 ### Step 1: Set Up the Repository
 ```sh
-# Create a new directory
-mkdir dsa && cd dsa
 
-# Initialize Git and clone the repository
-git init
+# Clone the repository
 git clone https://github.com/Pradeep3122003/DataStructures.git
+
+# Create a new directory
+cd DataStructures
 
 # Update system packages (Linux users)
 sudo apt update && sudo apt upgrade
